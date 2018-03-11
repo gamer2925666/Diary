@@ -1,0 +1,49 @@
+<preference-headers xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <!-- These settings headers are only used on tablets. -->
+
+    <!--<header-->
+    <!--android:fragment="com.example.gamer.diary.SettingsActivity$GeneralPreferenceFragment"-->
+    <!--android:icon="@drawable/ic_info_black_24dp"-->
+    <!--android:title="@string/pref_header_general" />-->
+
+    <!--<header-->
+    <!--android:fragment="com.example.gamer.diary.SettingsActivity$NotificationPreferenceFragment"-->
+    <!--android:icon="@drawable/ic_notifications_black_24dp"-->
+    <!--android:title="@string/pref_header_notifications" />-->
+
+    <!--<header-->
+    <!--android:fragment="com.example.gamer.diary.SettingsActivity$DataSyncPreferenceFragment"-->
+    <!--android:icon="@drawable/ic_sync_black_24dp"-->
+    <!--android:title="@string/pref_header_data_sync"-->
+    <!--/>-->
+
+    <header
+        android:fragment="com.example.gamer.diary.SettingsActivity$TestPreferenceFragment"
+        android:icon="@drawable/ic_info_black_24dp"
+        android:title="@string/pref_header_general">
+        <extra
+            android:name="setting"
+            android:value="general" />
+    </header>
+
+    <header
+        android:fragment="com.example.gamer.diary.SettingsActivity$TestPreferenceFragment"
+        android:icon="@drawable/ic_notifications_black_24dp"
+        android:title="@string/pref_header_notifications">
+        <extra
+            android:name="setting"
+            android:value="notifications" />
+    </header>
+
+    <header
+        android:fragment="com.example.gamer.diary.SettingsActivity$TestPreferenceFragment"
+        android:icon="@drawable/ic_sync_black_24dp"
+        android:title="@string/pref_header_data_sync">
+        <extra
+            android:name="setting"
+            android:value="dataSync" />
+    </header>
+
+
+</preference-headers>
