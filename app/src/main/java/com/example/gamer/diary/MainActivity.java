@@ -5,6 +5,7 @@ import android.app.Fragment;
 import android.app.FragmentManager;
 import android.content.ContentValues;
 import android.content.Intent;
+import android.content.IntentFilter;
 import android.content.pm.PackageManager;
 import android.net.Uri;
 import android.os.Bundle;
@@ -98,26 +99,20 @@ public class MainActivity extends AppCompatActivity
         int id = item.getItemId();
 
         if (id == R.id.nav_camera) {
-            // Handle the camera action
-            ContentValues contentValues = new ContentValues();
-            contentValues.put(MediaStore.Images.Media.MIME_TYPE, "image/jpeg");
 
-            Uri uri = getContentResolver().insert(MediaStore.Images.Media.EXTERNAL_CONTENT_URI, contentValues);
-            Intent intent = new Intent(MediaStore.ACTION_IMAGE_CAPTURE);
-//            intent.putExtra(MediaStore.EXTRA_OUTPUT, uri.getPath());
-            startActivityForResult(intent, 88);
 
         } else if (id == R.id.nav_gallery) {
             Toast.makeText(this, "nav_gallery", Toast.LENGTH_LONG).show();
-        } else if (id == R.id.nav_slideshow) {
-            Toast.makeText(this, "按下nav_slideshow", Toast.LENGTH_LONG).show();
-        } else if (id == R.id.nav_manage) {
-            Toast.makeText(this, "按下nav_manage", Toast.LENGTH_LONG).show();
-        } else if (id == R.id.nav_share) {
-            Toast.makeText(this, "按下nav_share", Toast.LENGTH_LONG).show();
-        } else if (id == R.id.nav_send) {
-            Toast.makeText(this, "按下nav_send", Toast.LENGTH_LONG).show();
         }
+//        else if (id == R.id.nav_slideshow) {
+//            Toast.makeText(this, "按下nav_slideshow", Toast.LENGTH_LONG).show();
+//        } else if (id == R.id.nav_manage) {
+//            Toast.makeText(this, "按下nav_manage", Toast.LENGTH_LONG).show();
+//        } else if (id == R.id.nav_share) {
+//            Toast.makeText(this, "按下nav_share", Toast.LENGTH_LONG).show();
+//        } else if (id == R.id.nav_send) {
+//            Toast.makeText(this, "按下nav_send", Toast.LENGTH_LONG).show();
+//        }
 
         DrawerLayout drawer = (DrawerLayout) findViewById(R.id.drawer_layout);
         drawer.closeDrawer(GravityCompat.START);
